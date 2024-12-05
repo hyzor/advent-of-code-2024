@@ -7,7 +7,7 @@ fn pair_exists(line: &[u16], pair: (u16, u16)) -> bool {
     line.contains(&pair.0) && line.contains(&pair.1)
 }
 
-fn validate_line(line: &Vec<u16>, rules: &[(u16, u16)]) -> bool {
+fn validate_line(line: &[u16], rules: &[(u16, u16)]) -> bool {
     let filtered_rules: Vec<(u16, u16)> = rules.iter().filter(|rule| pair_exists(line, **rule)).cloned().collect();
 
     let mut valid: bool = true;

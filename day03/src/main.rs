@@ -39,12 +39,10 @@ fn main() {
             op = 1;
         } else if content == "don't()" {
             op = 0;
-        } else {
-            if op == 1 {
-                let x: u32 = cap.get(1).unwrap().as_str().to_string().parse().unwrap();
-                let y: u32 = cap.get(2).unwrap().as_str().to_string().parse().unwrap();
-                result2 += x * y;
-            }
+        } else if op == 1 {
+            let x: u32 = cap.get(1).unwrap().as_str().to_string().parse().unwrap();
+            let y: u32 = cap.get(2).unwrap().as_str().to_string().parse().unwrap();
+            result2 += x * y;
         }
 
     }
