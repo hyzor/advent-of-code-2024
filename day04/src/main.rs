@@ -13,7 +13,7 @@ fn read_file_to_2d_map(file_path: &str) -> Vec<Vec<char>> {
 }
 
 fn is_x_mas_pair(input: char, input2: char) -> bool {
-    return (input == 'M' || input == 'S') && (input2 == 'M' || input2 == 'S') && input != input2;
+    (input == 'M' || input == 'S') && (input2 == 'M' || input2 == 'S') && input != input2
 }
 
 fn main() {
@@ -72,7 +72,7 @@ fn main() {
                     directions.push("DOWN");
                 }
 
-                if directions.len() > 0 {
+                if !directions.is_empty() {
                     total_matches += directions.len();
                 }
             } else if input[i][j] == 'A' {
